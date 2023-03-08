@@ -4,16 +4,17 @@
 #include <cstdlib>
 using namespace std;
 
-struct node
+struct snode
 {
     int data;
-    node * next;
+    snode* next;
 };
 
 /* *****************YOUR TURN! ******************************** */
 /* PLACE YOUR PROTOTYPE HERE */
+void sadd(snode*, snode*);
 
 
 /* These functions are already written and can be called to test out your code */
-void build(node * & head);      //supplied
-void display_all(node * head);  //supplied
+void sbuild(snode * & head);      //supplied
+void sdisplay_all(snode * head);  //supplied
