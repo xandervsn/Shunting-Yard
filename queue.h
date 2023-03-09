@@ -13,7 +13,7 @@ struct qnode
 /* *****************YOUR TURN! ********************\
 ************ */
 /* PLACE YOUR PROTOTYPE HERE */
-void qadd(qnode*, qnode*);
+void qadd(qnode* &head, qnode*);
 
 
 /* These functions are already written and can be c\

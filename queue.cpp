@@ -1,20 +1,9 @@
-#include "queue.h"
+#include "list.h"
 
-void add(qnode* current, qnode* n){
-  
+void qadd(node* &head, node* n){
+  node* temp = head;
+  head = n;
+  head->next = temp;
 }
 
-void build(qnode * & head) {
-  qnode* current = new qnode();
-  head = current;
-  qnode* previous = current;
-}
-
-void display_all(qnode * head) {
-  while (head != NULL) {
-    cout << head->data << " ";
-    head = head->next;
-  }
-  cout << endl;
-}
 

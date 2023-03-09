@@ -1,29 +1,32 @@
 #include <iostream>
 #include <cstring>
 #include "list.h"
-#include "queue.h"
 using namespace std;
 
 int main()
 {
-    snode* shead = NULL;
-    sbuild(shead);
-    sdisplay_all(shead);
+    node* shead = NULL;
+    build(shead);
+    display_all(shead);
     
-    qnode* qhead = NULL;
-    /*
-    qbuild(qhead);
-    qdisplay_all(qhead);
-    */
-    
-    int input;
-    cin >> input;
+    node* qhead = NULL;
+    build(qhead);
+    display_all(qhead);
 
-    snode* n = new snode;
-    n->data = input;
-    sadd(shead, n);
-        
-    sdisplay_all(shead);
-    
+    while(true){
+      int input;
+      cin >> input;
+
+      node* n = new node;
+      n->data = input;
+      sadd(shead, n);
+      display_all(shead);
+      
+      node* q = new node;
+      q->data = input;
+      qadd(qhead, q);
+      display_all(qhead);
+    }
+      
     return 0;
 }
