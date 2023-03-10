@@ -8,17 +8,17 @@ using namespace std;
 /* SOME CODE FROM FINAL-PRACTICE */
 struct node
 {
-    int data;
+    char data;
     node* next;
 };
 
-void push(node* current, node* n);
-int pop(node*&);
-int peek(node*);
-int peekt(node*);
+void push(node* current, char);
+char pop(node*&);
+char peek(node*);
+char peekt(node*);
 
-void enqueue(node*&, node*); 
-int dequeue(node*);
+void dequeue(node*&, char); 
+char enqueue(node*);
 
 /* These functions are already written and can be called to test out your code */
 void build(node * & head);      //supplied

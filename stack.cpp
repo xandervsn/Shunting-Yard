@@ -1,16 +1,18 @@
 #include "list.h"
 
-void push(node* current, node* n){
+void push(node* current, char input){
+  node* n = new node;
+  n->data = input;
   if(current->next == NULL){
     current->next = n;
     n->next = NULL;
     return;
   }else{
-    push(current->next, n);
+    push(current->next, input);
   }
 }
 
-int pop(node* &head){
+char pop(node* &head){
   if(head->next == NULL){
     cout << "This stack is empty!" << endl;
     return -1;
@@ -20,27 +22,27 @@ int pop(node* &head){
   head = head->next;
   delete temp;
   
-  return data;
+  return data - 48;
 }
 
-int peekt(node* head){
+char peekt(node* head){
   if(head->next == NULL){
     cout << "This stack is empty!" << endl;
     return -1;
   }
-  return head->data;
+  return head->next->data;
 }
 
 void build(node* &head) {
   node* current = new node();
   head = current;
-  head->data = -1;
+  head->data = 'H';
   node* previous = current;
 }
 
 void display_all(node* head) {
   while (head != NULL) {
-    cout << head->data << " ";
+    cout << char(head->data) << " ";
     head = head->next;
   }
   cout << endl;

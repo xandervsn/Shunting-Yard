@@ -1,17 +1,17 @@
 #include "list.h"
 
-void enqueue(node* &head, node* n){
-  push(head, n);
+void enqueue(node* &head, char input){
+  push(head, input);
 }
 
-int dequeue(node* current){
+char dequeue(node* current){
   if(current->next == NULL){
     cout << "This queue is empty!" << endl;
     return -1;
   }
   if(current->next->next == NULL){
     node* temp = current->next;
-    int data = temp->data;
+    char data = temp->data;
     current->next = NULL;
     delete temp;
     
@@ -25,7 +25,7 @@ int dequeue(node* current){
 
 
 //peek() is undefined in stack.cpp, no idea why, but i gotta hack it
-int peek(node* head){
+char peek(node* head){
   return peekt(head);
 }
 
