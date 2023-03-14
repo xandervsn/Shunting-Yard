@@ -54,6 +54,17 @@ int main()
     cout << "Q:" << endl;
     //cout << dequeue(qhead) << endl;
     display_all(qhead);
+
+    branch* tree = new branch;
+    buildTree(tree);
+    
+    int i;
+    while(i < 5){
+      cin >> input;
+      add(tree, input[0]);
+      
+      i++;
+    }
     
     return 0;
 }

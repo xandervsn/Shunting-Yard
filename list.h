@@ -4,6 +4,12 @@
 #include <cstdlib>
 using namespace std;
 
+struct branch
+{
+  char data;
+  branch* left;
+  branch* right;
+};
 
 /* SOME CODE FROM FINAL-PRACTICE */
 struct node
@@ -11,6 +17,9 @@ struct node
     char data;
     node* next;
 };
+
+void add(branch*, char);
+void buildTree(branch*);
 
 void push(node* current, char);
 char pop(node*&);
