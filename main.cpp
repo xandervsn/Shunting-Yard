@@ -57,14 +57,18 @@ int main()
 
     branch* tree = new branch;
     buildTree(tree);
-    
-    int i;
-    while(i < 5){
-      cin >> input;
-      add(tree, input[0]);
-      
-      i++;
+
+    while(true){
+      char data = pop(qhead);
+      cout << data << endl;
+      if(data != 'H'){
+	add(tree, data);
+      }else{
+	break;
+      }
     }
+
+    print(tree);
     
     return 0;
 }

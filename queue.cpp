@@ -6,8 +6,7 @@ void enqueue(node* &head, char input){
 
 char pop(node* &current){
   if(current->next == NULL){
-    cout << "This queue is empty!" << endl;
-    return -1;
+    return 'H';
   }
   if(current->next->next == NULL){
     node* temp = current->next;

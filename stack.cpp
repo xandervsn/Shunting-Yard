@@ -14,8 +14,7 @@ void push(node* current, char input){
 
 char dequeue(node* head){
   if(head->next == NULL){
-    cout << "This stack is empty!" << endl;
-    return -1;
+    return 'H';
   }
   node* first = head->next;
   int data = first->data;
