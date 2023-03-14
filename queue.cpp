@@ -4,7 +4,7 @@ void enqueue(node* &head, char input){
   push(head, input);
 }
 
-char dequeue(node* current){
+char pop(node* &current){
   if(current->next == NULL){
     cout << "This queue is empty!" << endl;
     return -1;
@@ -17,7 +17,7 @@ char dequeue(node* current){
     
     return data;
   }else{
-    dequeue(current->next);
+    pop(current->next);
   }
 }
 
@@ -25,7 +25,7 @@ char dequeue(node* current){
 
 
 //peek() is undefined in stack.cpp, no idea why, but i gotta hack it
-char peek(node* head){
-  return peekt(head);
+char peeek(node* head){
+  return peek(head);
 }
 

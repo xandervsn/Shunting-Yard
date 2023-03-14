@@ -15,10 +15,10 @@ struct node
 void push(node* current, char);
 char pop(node*&);
 char peek(node*);
-char peekt(node*);
+char peeek(node*);
 
-void dequeue(node*&, char); 
-char enqueue(node*);
+char dequeue(node*); 
+void enqueue(node*&, char);
 
 /* These functions are already written and can be called to test out your code */
 void build(node * & head);      //supplied

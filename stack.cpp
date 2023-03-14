@@ -12,25 +12,29 @@ void push(node* current, char input){
   }
 }
 
-char pop(node* &head){
+char dequeue(node* head){
   if(head->next == NULL){
     cout << "This stack is empty!" << endl;
     return -1;
   }
-  int data = head->data;
-  node* temp = head;
-  head = head->next;
-  delete temp;
+  node* first = head->next;
+  int data = first->data;
+  head->next = first->next;
+  delete first;
   
-  return data - 48;
+  return data;
 }
 
-char peekt(node* head){
+char peek(node* head){
   if(head->next == NULL){
     cout << "This stack is empty!" << endl;
     return -1;
   }
-  return head->next->data;
+  if(head->next->next == NULL){
+    return head->next->data;
+  }else{
+    peek(head->next);
+  }
 }
 
 void build(node* &head) {
