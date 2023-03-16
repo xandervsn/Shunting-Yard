@@ -8,29 +8,13 @@ void print(branch* head){
 }
 
 int add(branch* current, char input){
-  if(current->data == 'H'){
-    current->data = input;
-    return 1;
-  }else if(current->right == NULL){
-    branch* b = new branch;
-    current->right = b;
-    current->right->data = input;
-    current->right->left = NULL;
-    current->right->right = NULL;
-    return 1;
-  }else if(current->left == NULL){
-    branch* b = new branch;
-    current->left = b;
-    current->left->data = input;
-    current->left->left = NULL;
-    current->left->right = NULL;
-    return 1;
-  }else{
-    if(!add(current->right, input)){
-      add(current->left, input);
-    }
-  }
-  return 0;
+  
+}
+
+void set(branch* b, char input){
+  b->data = input;
+  b->left = NULL;
+  b->right = NULL;
 }
 
 void buildTree(branch* head){

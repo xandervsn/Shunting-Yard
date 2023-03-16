@@ -18,6 +18,7 @@ struct node
     node* next;
 };
 
+void set(branch*, char);
 void print(branch*);
 int add(branch*, char);
 void buildTree(branch*);

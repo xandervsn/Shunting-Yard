@@ -60,8 +60,8 @@ int main()
 
     while(true){
       char data = pop(qhead);
-      cout << data << endl;
       if(data != 'H'){
+	//cout << "zero" << endl;
 	add(tree, data);
       }else{
 	break;
