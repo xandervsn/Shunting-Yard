@@ -4,6 +4,7 @@
 #include <cstdlib>
 using namespace std;
 
+//tree
 struct branch
 {
   char data;
@@ -18,9 +19,13 @@ struct node
     node* next;
 };
 
-void set(branch*, char);
 void print(branch*);
-int add(branch*, char);
+
+void set(branch*, char);
+void postfix(branch*);
+void prefix(branch*);
+void infix(branch*);
+int add(branch*, node*);
 void buildTree(branch*);
 
 void push(node* current, char);

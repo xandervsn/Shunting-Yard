@@ -1,10 +1,12 @@
 #include "list.h"
 
 void enqueue(node* &head, char input){
+  //bit hacky, stack and queue difference here is how elements are accessed
   push(head, input);
 }
 
 char pop(node* &current){
+  //returns last node of a linked list, then deletes it
   if(current->next == NULL){
     return 'H';
   }
@@ -25,6 +27,7 @@ char pop(node* &current){
 
 //peek() is undefined in stack.cpp, no idea why, but i gotta hack it
 char peeek(node* head){
+  //i got it working but im too scared to delete this
   return peek(head);
 }
 

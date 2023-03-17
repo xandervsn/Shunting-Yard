@@ -1,6 +1,7 @@
 #include "list.h"
 
 void push(node* current, char input){
+  //adds node to the end of a linked list
   node* n = new node;
   n->data = input;
   if(current->next == NULL){
@@ -12,7 +13,9 @@ void push(node* current, char input){
   }
 }
 
+//dequeue is in here because i mixed up lifo n fifo
 char dequeue(node* head){
+  //returns head of linked list, then deletes it
   if(head->next == NULL){
     return 'H';
   }
@@ -25,8 +28,8 @@ char dequeue(node* head){
 }
 
 char peek(node* head){
+  //returns head of linked list
   if(head->next == NULL){
-    cout << "This stack is empty!" << endl;
     return -1;
   }
   if(head->next->next == NULL){
@@ -36,6 +39,7 @@ char peek(node* head){
   }
 }
 
+/* CODE TAKEN FROM FINAL-PRACTICE */
 void build(node* &head) {
   node* current = new node();
   head = current;
